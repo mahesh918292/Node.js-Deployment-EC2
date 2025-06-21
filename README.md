@@ -12,35 +12,36 @@ Step 4) Click Launch Instance
 Step 5) After successfully deploying that instance.It should be in the running state and after connect to that instance using ec2 instance connect.
 It uses temporary, one-time SSH keys that AWS injects just for your session.
 For this ssh 22 port should be must and should allow in the security group
-![6](https://github.com/user-attachments/assets/f9f11987-29a6-4ab4-9fd2-0f72f6fb2969)
+![6](https://github.com/user-attachments/assets/f8bcf6f1-6b03-40a8-a83e-9ccdaf2cddd9)
 
 Step 6)
 Run these commands
 # Update packages
-sudo yum update -y
+sudo yum update -y <br>
 
 # Install Node.js (Amazon Linux 2 has Node.js 14 in repos)
 sudo yum install -y nodejs git
-
+<br>
 # Check versions
-node -v
-npm -v
-git --version
+node -v <br>
+npm -v <br>
+git --version <br>
 
-# Copy github repo to here and install packages
-git clone https://github.com/yourusername/your-mern-repo.git
-cd your-mern-repo
-npm install
+# Copy github repo to here and install packages 
+git clone https://github.com/yourusername/your-mern-repo.git <br>
+cd your-mern-repo <br>
+npm install <br>
 
 
 # Install pm2 and run the process so that it will run even after closing the session
-sudo npm install -g pm2
-pm2 start app.js  # or your main server file
-pm2 startup systemd
-sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u ec2-user --hp /home/ec2-user
-pm2 save
+sudo npm install -g pm2 <br>
+pm2 start app.js  # or your main server file <br>
+pm2 startup systemd <br>
+sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u ec2-user --hp /home/ec2-user <br>
+pm2 save <br>
 
-![7](https://github.com/user-attachments/assets/f8bcf6f1-6b03-40a8-a83e-9ccdaf2cddd9)
-After Executing necessary commandss we can see the ouptut
+![6](https://github.com/user-attachments/assets/f9f11987-29a6-4ab4-9fd2-0f72f6fb2969)
+
+After Executing necessary commandss we can see the ouptut <br>
 
 
