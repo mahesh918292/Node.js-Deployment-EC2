@@ -28,7 +28,7 @@ npm -v <br>
 git --version <br>
 
 # Copy github repo to here and install packages 
-git clone https://github.com/yourusername/your-mern-repo.git <br>
+git clone https://github.com/johnpapa/node-hello.git <br>
 cd your-mern-repo <br>
 npm install <br>
 
@@ -40,6 +40,9 @@ pm2 startup systemd <br>
 sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u ec2-user --hp /home/ec2-user <br>
 pm2 save <br>
 
+Step 7)
+# In the security groups specify the http,https,ssh,tcp port if node.js port is running differently like 3000.
+Https can also be done if ssl/tls certificate is available (If domain is present )
 ![6](https://github.com/user-attachments/assets/f9f11987-29a6-4ab4-9fd2-0f72f6fb2969)
 
 After Executing necessary commandss we can see the ouptut <br>
