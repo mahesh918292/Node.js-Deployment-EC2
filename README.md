@@ -29,13 +29,13 @@ git --version <br>
 
 # Copy github repo to here and install packages 
 git clone https://github.com/johnpapa/node-hello.git <br>
-cd your-mern-repo <br>
+cd node-hello <br>
 npm install <br>
 
 
 # Install pm2 and run the process so that it will run even after closing the session
 sudo npm install -g pm2 <br>
-pm2 start app.js  # or your main server file <br>
+pm2 start index.js  # or your main server file <br>
 pm2 startup systemd <br>
 sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u ec2-user --hp /home/ec2-user <br>
 pm2 save <br>
